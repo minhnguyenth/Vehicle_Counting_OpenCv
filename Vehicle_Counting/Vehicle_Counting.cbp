@@ -28,10 +28,14 @@
 		</Build>
 		<Compiler>
 			<Add option="`opencv-config --cxxflags`" />
+			<Add option="`pkg-config --cflags opencv`" />
 		</Compiler>
 		<Linker>
 			<Add option="`opencv-config --ldstaticflags`" />
+			<Add option="`pkg-config --libs opencv`" />
 		</Linker>
+		<Unit filename="Blob.cpp" />
+		<Unit filename="Blob.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
